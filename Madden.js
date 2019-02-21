@@ -20,12 +20,29 @@ function renderSlide() {
                 div.classList.remove("d-flex");
             });
             product.classList.add("showing");
+            // pick.addEventListener("", () => {
+            //     if (product.classList.contains("showing")) {
+            //         product.classList.remove("showing");
+            //     }
+            // });
 
             document.querySelector(`#team-${pick.dataset.team}`).style.display =
                 "flex";
         });
     }
 }
+function endBtn() {
+    var ends = document.querySelectorAll(".go-away");
+    var slide = document.getElementById("product");
+
+    for (const end of ends) {
+        end.addEventListener("click", () => {
+            debugger;
+            slide.classList.remove("showing");
+        });
+    }
+}
 
 renderProduct(TeamInventory);
 renderSlide();
+endBtn();

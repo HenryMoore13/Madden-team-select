@@ -42,7 +42,7 @@ export const TeamInventory = [
     {
         TeamFname: "ARIZONA",
         TeamLname: "CARDINALS",
-        TeamPic: "/pics/CARDINALS.jpeg",
+        TeamPic: "/pics/CARDINALS.png",
         TeamRating: 73,
         TeamOFF: 73,
         TeamDEF: 79,
@@ -102,7 +102,7 @@ export const TeamInventory = [
     {
         TeamFname: "NEW YORK",
         TeamLname: "GIANTS",
-        TeamPic: "/pics/GIANTS.jpeg",
+        TeamPic: "/pics/GIANTS.png",
         TeamRating: 73,
         TeamOFF: 77,
         TeamDEF: 73,
@@ -222,7 +222,7 @@ export const TeamInventory = [
     {
         TeamFname: "CAROLINA",
         TeamLname: "PANTHERS",
-        TeamPic: "/pics/PANTHERS.jpeg",
+        TeamPic: "/pics/PANTHERS.png",
         TeamRating: 82,
         TeamOFF: 81,
         TeamDEF: 85,
@@ -242,7 +242,7 @@ export const TeamInventory = [
     {
         TeamFname: "SAN FRANCISCO",
         TeamLname: "49ERS",
-        TeamPic: "/pics/49ERS.jpeg",
+        TeamPic: "/pics/49ERS.png",
         TeamRating: 78,
         TeamOFF: 85,
         TeamDEF: 75,
@@ -262,7 +262,7 @@ export const TeamInventory = [
     {
         TeamFname: "MINNESOTA",
         TeamLname: "VIKINGS",
-        TeamPic: "/pics/VIKINGS.jpeg",
+        TeamPic: "/pics/VIKINGS.png",
         TeamRating: 81,
         TeamOFF: 81,
         TeamDEF: 87,
@@ -382,7 +382,7 @@ export const TeamInventory = [
     {
         TeamFname: "SEATTLE",
         TeamLname: "SEAHAWKS",
-        TeamPic: "/pics/SEAHAWKS.jpeg",
+        TeamPic: "/pics/SEAHAWKS.png",
         TeamRating: 82,
         TeamOFF: 81,
         TeamDEF: 85,
@@ -422,7 +422,7 @@ export const TeamInventory = [
     {
         TeamFname: "HOUSTON",
         TeamLname: "TEXANS",
-        TeamPic: "/pics/TEXANS.jpeg",
+        TeamPic: "/pics/TEXANS.png",
         TeamRating: 81,
         TeamOFF: 81,
         TeamDEF: 87,
@@ -442,7 +442,7 @@ export const TeamInventory = [
     {
         TeamFname: "JACKSONVILLE",
         TeamLname: "JAGUARS",
-        TeamPic: "/pics/JAGUARS.jpeg",
+        TeamPic: "/pics/JAGUARS.png",
         TeamRating: 83,
         TeamOFF: 81,
         TeamDEF: 91,
@@ -542,7 +542,7 @@ export const TeamInventory = [
     {
         TeamFname: "PHILADELPHIA",
         TeamLname: "EAGLES",
-        TeamPic: "/pics/EAGLES.png",
+        TeamPic: "/pics/EAGLES.jpeg",
         TeamRating: 91,
         TeamOFF: 97,
         TeamDEF: 89,
@@ -582,7 +582,7 @@ export const TeamInventory = [
     {
         TeamFname: "DALLAS",
         TeamLname: "COWBOYS",
-        TeamPic: "/pics/COWBOYS.jpeg",
+        TeamPic: "/pics/COWBOYS.png",
         TeamRating: 84,
         TeamOFF: 89,
         TeamDEF: 83,
@@ -598,5 +598,45 @@ export const TeamInventory = [
         Player3Fname: "SEAN",
         Player3Lname: "LEE",
         Player3OVR: 95
+    },
+    {
+        TeamFname: "WASHINGTON",
+        TeamLname: "REDSKINS",
+        TeamPic: "/pics/REDSKINS.png",
+        TeamRating: 80,
+        TeamOFF: 85,
+        TeamDEF: 81,
+        Position1: "LT",
+        Player1Fname: "TRENT",
+        Player1Lname: "WILLIAMS",
+        Player1OVR: "91",
+        Position2: "TE",
+        Player2Fname: "JORDAN",
+        Player2Lname: "REED",
+        Player2OVR: 89,
+        Position3: "RG",
+        Player3Fname: "BRANDON",
+        Player3Lname: "SCHERFF",
+        Player3OVR: 89
+    },
+    {
+        TeamFname: "BUFFALO",
+        TeamLname: "BILLS",
+        TeamPic: "/pics/BILLS.png",
+        TeamRating: 74,
+        TeamOFF: 71,
+        TeamDEF: 81,
+        Position1: "RE",
+        Player1Fname: "JERRY",
+        Player1Lname: "HUGHES",
+        Player1OVR: "86",
+        Position2: "FS",
+        Player2Fname: "MICAH",
+        Player2Lname: "HYDE",
+        Player2OVR: 86,
+        Position3: "ROLB",
+        Player3Fname: "LORENZO",
+        Player3Lname: "ALEXANDER",
+        Player3OVR: 85
     }
 ];

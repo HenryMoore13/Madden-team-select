@@ -23,10 +23,11 @@
 
             text-align: center;
             border-radius: 3%;
-            color: white;
+            color: rgb(255, 250, 250);
         }
         body {
             width: 100%;
+            background-color: black;
         }
         .overall {
             background-color: rgb(111, 194, 3);
@@ -49,9 +50,10 @@
             border-bottom: 7px solid rgb(1, 10, 48);
         }
         .team {
-            width: 8rem;
-            height: 8rem;
-
+            width: 8.5rem;
+            height: 8.5rem;
+            margin: 0.5rem 0rem 0.5rem 0rem;
+            margin-left: 1.5rem;
             display: inline-block;
         }
         .team img {
@@ -62,11 +64,16 @@
             width: 75%;
             height: 75%;
         }
+        .select {
+            color: rgb(219, 238, 167);
+        }
         h1 {
             text-align: center;
         }
         #product {
-            background-color: rgba(255, 255, 255, 0.932);
+            border-radius: 2%;
+            background-color: rgba(243, 243, 243, 0.932);
+            margin: 2rem 0rem 2rem 0rem;
             width: 65vw;
             height: 75vh;
             position: absolute;
@@ -79,14 +86,17 @@
         #product.showing {
             transform: translateX(0);
         }
-        #go-away {
+
+        .go-away {
             position: absolute;
             top: 1rem;
             right: 1rem;
+            color: rgb(0, 0, 0);
+            background-color: rgb(167, 167, 167);
         }
     </style>
     <body>
-        <h1 class="">Select Your Team</h1>
+        <h1 class="select">Select Your Team</h1>
         <div class="team" data-team="BENGALS">
             <img src="/pics/bengals.png" alt="" />
         </div>
@@ -94,7 +104,7 @@
             <img src="/pics/BUCCANEERS.png" alt="" />
         </div>
         <div class="team" data-team="CARDINALS">
-            <img src="/pics/CARDINALS.jpeg" alt="" />
+            <img src="/pics/CARDINALS.png" alt="" />
         </div>
         <div class="team" data-team="JETS">
             <img src="/pics/JETS.png" alt="" />
@@ -103,7 +113,7 @@
             <img src="/pics/RAIDERS.png" alt="" />
         </div>
         <div class="team" data-team="GIANTS">
-            <img src="/pics/GIANTS.jpeg" alt="" />
+            <img src="/pics/GIANTS.png" alt="" />
         </div>
         <div class="team" data-team="BROWNS">
             <img src="/pics/BROWNS.png" alt="" />
@@ -121,13 +131,13 @@
             <img src="/pics/FALCONS.png" alt="" />
         </div>
         <div class="team" data-team="PANTHERS">
-            <img src="/pics/PANTHERS.jpeg" alt="" />
+            <img src="/pics/PANTHERS.png" alt="" />
         </div>
         <div class="team" data-team="49ERS">
-            <img src="/pics/49ERS.jpeg" alt="" />
+            <img src="/pics/49ERS.png" alt="" />
         </div>
         <div class="team" data-team="VIKINGS">
-            <img src="/pics/VIKINGS.jpeg" alt="" />
+            <img src="/pics/VIKINGS.png" alt="" />
         </div>
         <div class="team" data-team="BRONCOS">
             <img src="/pics/BRONCOS.png" alt="" />
@@ -145,16 +155,16 @@
             <img src="/pics/COLTS.png" alt="" />
         </div>
         <div class="team" data-team="SEAHAWKS">
-            <img src="/pics/SEAHAWKS.jpeg" alt="" />
+            <img src="/pics/SEAHAWKS.png" alt="" />
         </div>
         <div class="team" data-team="BEARS">
             <img src="/pics/BEARS.png" alt="" />
         </div>
         <div class="team" data-team="TEXANS">
-            <img src="/pics/TEXANS.jpeg" alt="" />
+            <img src="/pics/TEXANS.png" alt="" />
         </div>
         <div class="team" data-team="JAGUARS">
-            <img src="/pics/JAGUARS.jpeg" alt="" />
+            <img src="/pics/JAGUARS.png" alt="" />
         </div>
         <div class="team" data-team="SAINTS">
             <img src="/pics/SAINTS.png" alt="" />
@@ -169,24 +179,30 @@
             <img src="/pics/RAMS.png" alt="" />
         </div>
         <div class="team" data-team="EAGLES">
-            <img src="/pics/EAGLES.png" alt="" />
+            <img src="/pics/EAGLES.jpeg" alt="" />
         </div>
         <div class="team" data-team="PATRIOTS">
             <img src="/pics/PATRIOTS.png" alt="" />
         </div>
         <div class="team" data-team="COWBOYS">
-            <img src="/pics/COWBOYS.jpeg" alt="" />
+            <img src="/pics/COWBOYS.png" alt="" />
+        </div>
+        <div class="team" data-team="REDSKINS">
+            <img src="/pics/REDSKINS.png" alt="" />
+        </div>
+        <div class="team" data-team="BILLS">
+            <img src="/pics/BILLS.png" alt="" />
         </div>
     </body>
-    <div id="product">
-        <button id="go-away">X</button>
-    </div>
+    <div id="product"></div>
     <script id="item" type="text/x-handlebars-template">
         {{#each product}}
         <div id="team-{{ TeamLname }}" style="display: none">
+
+            <button class="go-away btn">X</button>
             <div class="mr-5">
                 <div>
-                    <h3 id="team">{{ TeamFname }}</h3>
+                    <h3 id="team" class="ml-1">{{ TeamFname }}</h3>
                     <h1 id="team">{{ TeamLname }}</h1>
                     <img class="photo" src="{{ TeamPic }}" />
                 </div>
@@ -208,7 +224,7 @@
             <div>
                 <h3>Top Players</h3>
                 <div id="topplayer" class="d-flex">
-                    <div><img class="mr-4" id="players" src="/pics/smiley.jpeg" /></div>
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
                     <div class="mr-4">
                         <h5>{{ Position1 }}</h5>
                         <h3>{{ Player1Fname }}</h3>
@@ -223,7 +239,7 @@
                 </div>
 
                 <div id="topplayer" class="d-flex">
-                    <div><img class="mr-4" id="players" src="/pics/smiley.jpeg" /></div>
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
                     <div class="mr-4">
                             <h5>{{ Position2 }}</h5>
                             <h3>{{ Player2Fname }}</h3>
@@ -238,7 +254,7 @@
                 </div>
 
                 <div id="topplayer" class="d-flex">
-                    <div><img class="mr-4" id="players" src="/pics/smiley.jpeg" /></div>
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
                     <div class="mr-4">
                             <h5>{{ Position3 }}</h5>
                             <h3>{{ Player3Fname }}</h3>
