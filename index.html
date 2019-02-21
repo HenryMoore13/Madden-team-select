@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
+        <title>Madden Stats</title>
+    </head>
+    <style>
+        img {
+            width: 23rem;
+            height: 23rem;
+        }
+        #Slide {
+            margin-top: 3rem;
+            background-color: rgb(212, 201, 201);
+        }
+        #ratings {
+            margin: 1rem;
+            width: 5.5rem;
+            height: 5.5rem;
+
+            text-align: center;
+            border-radius: 3%;
+            color: rgb(255, 250, 250);
+        }
+        body {
+            width: 100%;
+            background-color: black;
+        }
+        .overall {
+            background-color: rgb(111, 194, 3);
+        }
+        .offence {
+            background-color: rgb(4, 196, 4);
+        }
+        .defence {
+            background-color: rgb(111, 194, 3);
+        }
+        #team {
+            color: rgb(1, 10, 48);
+        }
+        #players {
+            width: 6.5rem;
+            height: 6.5rem;
+        }
+        #topplayer {
+            margin-top: 3.5rem;
+            border-bottom: 7px solid rgb(1, 10, 48);
+        }
+        .team {
+            width: 8.5rem;
+            height: 8.5rem;
+            margin: 0.5rem 0rem 0.5rem 0rem;
+            margin-left: 1.5rem;
+            display: inline-block;
+        }
+        .team img {
+            width: 100%;
+            height: 100%;
+        }
+        .photo img {
+            width: 75%;
+            height: 75%;
+        }
+        .select {
+            color: rgb(219, 238, 167);
+        }
+        h1 {
+            text-align: center;
+        }
+        #product {
+            border-radius: 2%;
+            background-color: rgba(243, 243, 243, 0.932);
+            margin: 2rem 0rem 2rem 0rem;
+            width: 65vw;
+            height: 75vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        #product.showing {
+            transform: translateX(0);
+        }
+
+        .go-away {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: rgb(0, 0, 0);
+            background-color: rgb(167, 167, 167);
+        }
+    </style>
+    <body>
+        <h1 class="select">Select Your Team</h1>
+        <div class="team" data-team="BENGALS">
+            <img src="/pics/bengals.png" alt="" />
+        </div>
+        <div class="team" data-team="BUCCANEERS">
+            <img src="/pics/BUCCANEERS.png" alt="" />
+        </div>
+        <div class="team" data-team="CARDINALS">
+            <img src="/pics/CARDINALS.png" alt="" />
+        </div>
+        <div class="team" data-team="JETS">
+            <img src="/pics/JETS.png" alt="" />
+        </div>
+        <div class="team" data-team="RAIDERS">
+            <img src="/pics/RAIDERS.png" alt="" />
+        </div>
+        <div class="team" data-team="GIANTS">
+            <img src="/pics/GIANTS.png" alt="" />
+        </div>
+        <div class="team" data-team="BROWNS">
+            <img src="/pics/BROWNS.png" alt="" />
+        </div>
+        <div class="team" data-team="DOLPHINS">
+            <img src="/pics/DOLPHINS.png" alt="" />
+        </div>
+        <div class="team" data-team="LIONS">
+            <img src="/pics/LIONS.png" alt="" />
+        </div>
+        <div class="team" data-team="TITANS">
+            <img src="/pics/TITANS.png" alt="" />
+        </div>
+        <div class="team" data-team="FALCONS">
+            <img src="/pics/FALCONS.png" alt="" />
+        </div>
+        <div class="team" data-team="PANTHERS">
+            <img src="/pics/PANTHERS.png" alt="" />
+        </div>
+        <div class="team" data-team="49ERS">
+            <img src="/pics/49ERS.png" alt="" />
+        </div>
+        <div class="team" data-team="VIKINGS">
+            <img src="/pics/VIKINGS.png" alt="" />
+        </div>
+        <div class="team" data-team="BRONCOS">
+            <img src="/pics/BRONCOS.png" alt="" />
+        </div>
+        <div class="team" data-team="PACKERS">
+            <img src="/pics/PACKERS.png" alt="" />
+        </div>
+        <div class="team" data-team="RAVENS">
+            <img src="/pics/RAVENS.png" alt="" />
+        </div>
+        <div class="team" data-team="Cheifs">
+            <img src="/pics/KC.svg" alt="" />
+        </div>
+        <div class="team" data-team="COLTS">
+            <img src="/pics/COLTS.png" alt="" />
+        </div>
+        <div class="team" data-team="SEAHAWKS">
+            <img src="/pics/SEAHAWKS.png" alt="" />
+        </div>
+        <div class="team" data-team="BEARS">
+            <img src="/pics/BEARS.png" alt="" />
+        </div>
+        <div class="team" data-team="TEXANS">
+            <img src="/pics/TEXANS.png" alt="" />
+        </div>
+        <div class="team" data-team="JAGUARS">
+            <img src="/pics/JAGUARS.png" alt="" />
+        </div>
+        <div class="team" data-team="SAINTS">
+            <img src="/pics/SAINTS.png" alt="" />
+        </div>
+        <div class="team" data-team="CHARGERS">
+            <img src="/pics/CHARGERS.png" alt="" />
+        </div>
+        <div class="team" data-team="STEELERS">
+            <img src="/pics/STEELERS.png" alt="" />
+        </div>
+        <div class="team" data-team="RAMS">
+            <img src="/pics/RAMS.png" alt="" />
+        </div>
+        <div class="team" data-team="EAGLES">
+            <img src="/pics/EAGLES.jpeg" alt="" />
+        </div>
+        <div class="team" data-team="PATRIOTS">
+            <img src="/pics/PATRIOTS.png" alt="" />
+        </div>
+        <div class="team" data-team="COWBOYS">
+            <img src="/pics/COWBOYS.png" alt="" />
+        </div>
+        <div class="team" data-team="REDSKINS">
+            <img src="/pics/REDSKINS.png" alt="" />
+        </div>
+        <div class="team" data-team="BILLS">
+            <img src="/pics/BILLS.png" alt="" />
+        </div>
+    </body>
+    <div id="product"></div>
+    <script id="item" type="text/x-handlebars-template">
+        {{#each product}}
+        <div id="team-{{ TeamLname }}" style="display: none">
+
+            <button class="go-away btn">X</button>
+            <div class="mr-5">
+                <div>
+                    <h3 id="team" class="ml-1">{{ TeamFname }}</h3>
+                    <h1 id="team">{{ TeamLname }}</h1>
+                    <img class="photo" src="{{ TeamPic }}" />
+                </div>
+                <div class="d-flex">
+                    <div id="ratings" class="overall">
+                        <h1>{{ TeamRating }}</h1>
+                        <h6>OVR</h6>
+                    </div>
+                    <div id="ratings" class="offence">
+                        <h1>{{ TeamOFF }}</h1>
+                        <h6>OFF</h6>
+                    </div>
+                    <div id="ratings" class="defence">
+                        <h1>{{ TeamDEF }}</h1>
+                        <h6>DEF</h6>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>Top Players</h3>
+                <div id="topplayer" class="d-flex">
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
+                    <div class="mr-4">
+                        <h5>{{ Position1 }}</h5>
+                        <h3>{{ Player1Fname }}</h3>
+                        <h3><b>{{ Player1Lname }}</b></h3>
+                    </div>
+                    <div>
+                        <div>
+                            <h3><b>{{ Player1OVR }}</b></h3>
+                        </div>
+                        <div><h4>OVR</h4></div>
+                    </div>
+                </div>
+
+                <div id="topplayer" class="d-flex">
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
+                    <div class="mr-4">
+                            <h5>{{ Position2 }}</h5>
+                            <h3>{{ Player2Fname }}</h3>
+                            <h3><b>{{ Player2Lname }}</b></h3>
+                        </div>
+                        <div>
+                            <div>
+                                <h3><b>{{ Player2OVR }}</b></h3>
+                            </div>
+                            <div><h4>OVR</h4></div>
+                        </div>
+                </div>
+
+                <div id="topplayer" class="d-flex">
+                    <div><img class="mr-4" id="players" src="/pics/smiley.png" /></div>
+                    <div class="mr-4">
+                            <h5>{{ Position3 }}</h5>
+                            <h3>{{ Player3Fname }}</h3>
+                            <h3><b>{{ Player3Lname }}</b></h3>
+                        </div>
+                        <div>
+                            <div>
+                                <h3><b>{{ Player3OVR }}</b></h3>
+                            </div>
+                            <div><h4>OVR</h4></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+
+    <script src="./Madden.js" type="module"></script>
+</html>
